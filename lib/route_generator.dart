@@ -15,6 +15,12 @@ import 'src/pages/profile.dart';
 import 'src/pages/settings.dart';
 import 'src/pages/signup.dart';
 import 'src/pages/splash_screen.dart';
+import 'src/pages/phoneVerification.dart';
+import 'src/pages/mylogin.dart';
+import 'src/pages/welomescreen.dart';
+
+
+
 
 class RouteGenerator {
   static Route<dynamic> generateRoute(RouteSettings settings) {
@@ -57,6 +63,12 @@ class RouteGenerator {
         return MaterialPageRoute(builder: (_) => LanguagesWidget());
       case '/Settings':
         return MaterialPageRoute(builder: (_) => SettingsWidget());
+      case '/OTP':
+        return MaterialPageRoute(builder: (_) => PhoneVerification());
+      case '/mylogin':
+        return MaterialPageRoute(builder: (_) =>LoginScreen());
+      case '/welcome':
+        return MaterialPageRoute(builder: (_) =>WelcomeScreen());
       default:
         // If there is no such named route in the switch statement, e.g. /third
         return MaterialPageRoute(builder: (_) => Scaffold(body: SafeArea(child: Text('Route Error'))));
